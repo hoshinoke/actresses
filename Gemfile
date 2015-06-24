@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.2.0'
 
+=begin
+ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0.beta1'
 
@@ -65,7 +67,9 @@ end
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 
 group :development do
+  gem 'rubocop', require: false
   gem 'shotgun'
+  gem 'society'
 end
 
 gem 'thin'
@@ -75,8 +79,20 @@ gem 'haml-rails'
 
 # use bootstrap
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'twitter-bootstrap-rails', github: 'diowa/twitter-bootstrap-rails', branch: 'fontawesome-3.2.1'
+#gem 'twitter-bootstrap-rails', github: 'diowa/twitter-bootstrap-rails', branch: 'fontawesome-3.2.1'
+gem 'twbs_sass_rails'
 
 # use tumblr
 gem 'tumblife'
 gem 'mechanize'
+
+
+=end
+
+group :development do
+  gem 'rubocop', require: false
+  gem 'shotgun'
+  gem 'society'
+end
+
+

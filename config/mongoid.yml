@@ -1,6 +1,7 @@
 development:
   sessions:
     default:
+      #uri: 'MONGOLAB_URI=mongodb://heroku_app16903621_A:kXoCSDklVlQABfkULmYEdmEkuuXPvuhg@ds027709.mongolab.com:27709/heroku_app16903621'
       database: actress_app_dev
       hosts:
         - localhost:27017

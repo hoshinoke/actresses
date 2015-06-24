@@ -11,7 +11,6 @@ class Actress
   has_many :photos 
   has_and_belongs_to_many :tags
 
-
   # pick_up
   field :pick_up , type: Integer, default: 0
   scope :picked , ->{where(pick_up: 1)}
@@ -28,6 +27,21 @@ class Actress
   has_many :similars, :class_name => 'Actress', :foreign_key => :actress_id 
   #↓要る
   belongs_to :actress, :class_name => 'Actress', :foreign_key => :actress_id 
+
+  class NullEntry
+    def body
+      ''
+    end
+
+    def title
+      ''
+    end
+  end
+
+  def entry_body_title
+    @entry = NullEntry.new
+    @entry.body + @entry.title
+  end
 
   def thumbnail_rand
     photos_sort_by_points.map(&:url)[rand(4)]

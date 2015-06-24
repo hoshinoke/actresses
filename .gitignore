@@ -33,3 +33,5 @@ app/models/tumblr_host.rb
 config/development.mongoid.yml
 
 public/assets/*
+
+/doc
